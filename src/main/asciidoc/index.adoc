@@ -3,7 +3,7 @@ Quentin Vandekerckhove <quentin.vandekerckhove@salto-consulting.com>
 :revnumber: {revnumber}
 :revdate: {docTimestamp}
 :experimental:
-:data-uri:
+//:data-uri:
 :allow-uri-read:
 :description: AsciiDoctor with Maven integration example
 :imagesdir: images
@@ -13,12 +13,12 @@ Quentin Vandekerckhove <quentin.vandekerckhove@salto-consulting.com>
 :sourcedir: src/main/java
 :docdir: src/main/asciidoctor
 
-This example is an introduction to link:http://asciidoctor.org[AsciiDoctor] and how to include it in a Maven project. 
+This example is an introduction to link:http://asciidoctor.org[AsciiDoctor] and how to include it in a Maven project.
 
 
 == What's new ?
 
-This first version introduces this documentation. The _user friendly_ format is generated automaticaly at build time. Integrated with the source code, the documentation followes the project lyfecycle. 
+This first version introduces this documentation. The _user friendly_ format is generated automaticaly at build time. Integrated with the source code, the documentation followes the project lyfecycle.
 
 == Build & generate documentation
 
@@ -52,10 +52,9 @@ include::../../../pom.xml[lines=66..83,indent=0]
 
 [source,bash]
 ----
-mvn spring-boot:run 
+mvn spring-boot:run
 ----
 
 Then, browse link:http://localhost:8080[]
 
 image:screenshot.jpg[]
-

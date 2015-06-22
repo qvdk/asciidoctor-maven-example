@@ -1,0 +1,21 @@
+= Introduction to Asciidoctor and its maven intregration
+Quentin Vandekerckhove <qvandekerckhove@salto-consulting.com>
+
+This project is an example on how to integrate a beautiful documentation written in link:http://asciidoctor.org[Asciidoctor] into a project.
+
+You can test it yourself:
+
+[source,bash]
+----
+git clone https://github.com/qvdk/asciidoctor-maven-example.git
+cd asciidoctor-maven-example
+mvn install
+----
+
+Then, browse your the generated `index.html` file in `target/generated-docs`..
+
+.Open the generated documentation with the Chromium-browser
+[source,bash]
+----
+chromium-browser target/generated-docs/index.html
+----
