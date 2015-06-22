@@ -1,0 +1,61 @@
+= Asciidoctor Maven Example
+Quentin Vandekerckhove <quentin.vandekerckhove@salto-consulting.com>
+:revnumber: {revnumber}
+:revdate: {docTimestamp}
+:experimental:
+:data-uri:
+:allow-uri-read:
+:description: AsciiDoctor with Maven integration example
+:imagesdir: images
+:source-highlighter: highlightjs
+:icons: font
+:toc: right
+:sourcedir: src/main/java
+:docdir: src/main/asciidoctor
+
+This example is an introduction to link:http://asciidoctor.org[AsciiDoctor] and how to include it in a Maven project. 
+
+
+== What's new ?
+
+This first version introduces this documentation. The _user friendly_ format is generated automaticaly at build time. Integrated with the source code, the documentation followes the project lyfecycle. 
+
+== Build & generate documentation
+
+
+This command will build the application and generate the user-friendly format of the documentation.
+
+[source,bash]
+----
+mvn install
+----
+
+
+
+The documentation can be publish automatically on the deploy phase.
+
+[source,bash]
+----
+mvn deploy
+----
+
+The deployment can be done by publishing with a copy on a Web server, or in this example by SCM publish. The goal is to publish documentation for each release of this project, and preview it for all snapshots.
+
+
+[source,xml]
+----
+include::../../../pom.xml[lines=66..83,indent=0]
+----
+
+
+== Run it!
+
+[source,bash]
+----
+mvn spring-boot:run 
+----
+
+Then, browse link:http://localhost:8080[]
+
+image:screenshot.jpg[]
+
